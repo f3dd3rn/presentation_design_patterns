@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Design Patterns</title>
+
+    <meta name="description" content="Presentation of two design patterns by the gang of 4">
+    <meta name="author" content="Stephanie Feddern">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <!--<link rel="stylesheet" href="css/theme/default.css" id="theme">-->
+    <link rel="stylesheet" href="css/theme/akra.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <img src="img/evolution.png"/>
+          <p>
+            <p>In general. Twice in detail. Recommended reading.</p>
+          </p>
+        </section>
+
+
+        <section>
+          <h2>Agenda</h2>
+          
+          <div class="square3 red">
+          <h1>In general</h1>
+            <ol>
+              <li>What are design patterns?</li>
+              <li>3 basic kinds</li>
+              <li>23 design patterns</li>
+              <li>Why should we use them?</li>
+              <li>OOD Principles</li>
+            </ol>
+          </div>
+          
+          <div class="square3 green">
+          <h1>Twice in detail</h1>
+            <ol>
+              <li>Observer</li>
+              <li>Strategy</li>
+            </ol>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+          </div>
+          
+          <div class="square3 blue">
+          <h1>Recommended reading</h1>
+              <ul>
+                <li>articles</li>
+                <li>books</li>
+                <li>podcasts</li>
+                <li>&hellip;</li>
+              </ul>
+              <br/>
+              <br/>
+          </div>
+        </section>
+
+
+        <section>
+          <h2>Meet the referee</h2>
+          <div class="circular inline-block" style="background: url('img/me2.jpg');"></div>
+        </section>
+
+
+        <section>
+          <section>
+            <h2>In general</h2>
+          </section>
+
+          <section>
+            <h2>What are design patterns?</h2>
+          </section>
+
+          <section>
+            <h2>3 basic kinds</h2>
+          </section>
+
+          <section>
+            <img src="img/behaviors-that-pass-on.jpg" alt="behavioral design patterns"/>
+            <p class="fragment roll-in">behavioral</p>
+          </section>
+          
+          <section>
+            <img src="img/weihnachtsmann&amp;co.kg_fabrik_klein.png" alt="creational design patterns"/>
+            <p class="fragment roll-in">creational</p>
+          </section>
+
+          <section>
+            <img src="img/structural.jpg" alt="structural design patterns"/>
+            <p class="fragment roll-in">structural</p>
+          </section>
+
+          <section>
+            <img src="img/23-patterns-gang-of-4.gif" alt="23 design patterns"/>
+          </section>
+
+          <section>
+            <h2>Why should we use them?</h2>
+          </section>
+
+          <section>
+            <h2>OOD Principles</h2>
+            <p class="fragment grow">
+              SOLID
+            </p>
+            <p>
+              by uncle Bob
+            </p>
+          </section>
+
+          <section>
+            <h2>Single Responsibility</h2>
+            <img src="img/srp.jpeg"/>
+            <p>
+              Just because you can, does not mean you should&hellip;
+          </section>
+
+          <section>
+            <h2>Open Closed</h2>
+            <img src="img/ocp.jpg"/>
+            <p>
+              Brain suregery is not necessary when putting on a hat.
+            </p>
+          </section>
+
+          <section>
+            <h2>Liskov Substitution</h2>
+            <img src="img/lsp.jpg"/>
+            <p>
+              If it looks like a duck, quacks like a duck, but needs batteries &ndash;<br/>
+              you probably have the wrong abstraction.
+            </p>
+          </section>
+
+          <section>
+            <h2>Interface Segregation</h2>
+            <img src="img/isp.jpg"/>
+            <p>Plug it in! &ndash; Which one?</p>
+          </section>
+
+          <section>
+            <h2>Dependency Inversion</h2>
+            <img src="img/dip.png"/>
+            <p>Would you solder a lamp directly to the electrical wiring in the wall?</p>
+          </section>
+        </section>
+
+
+        <section>
+          <section>
+            <h1>Twice in detail</h1>
+          </section>
+
+          <section>
+            <h2>Observer</h2>
+          </section>
+
+          <section>
+            <h2>Strategy</h2>
+          </section>
+        </section>
+        
+        <section>
+          <section>
+            <h2>Recommended reading</h2>
+          </section>
+          
+          <section>
+            <img src="img/book_cover_DesignPatterns_Go4.png" alt="title: Design Patterns | subtitle: Elements of Reusable Object-Oriented Software | authors: Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides"/>
+          </section>
+
+          <section>
+            <img src="img/eaa.jpg" alt="title: Patterns of Enterprise Application Architecture | author: Martin Fowler"/>
+          </section>
+
+          <section>
+            <img src="img/head-first.jpg" alt="title: Design Patterns | authors: Eric &amp; Elisabeth Freeman | Head First series"/>
+            <p>
+              see also:
+            </p>
+            <a href="http://blog.codinghorror.com/head-first-design-patterns/"><img src="img/logo-coding-horror.jpg" alt="Coding Horror"/></a>
+          </section>
+
+          <section>
+            <img src="img/effective-java.jpg" alt="title: Effective Java | author: Joshua Bloch"/>
+          </section>
+
+          <section>
+            <img src="img/are-your-lights-on.jpg" alt="title: Are Your Lights On? | subtitle: How to Figure Out What the Problem Really Is | authors:  Donald C. Gause, Gerald M. Weinberg"/>
+          </section>
+
+          <section>
+            <h2>&hellip;</h2>
+            <p>
+              I prepared a mail for you, that substitutes an handout.<br/>
+              It provides you with links.
+            </p>
+          </section>
+        </section>
+        
+
+
+
+
+
+
+
+
+
+
+
+        <section>
+          <section>
+            <h2>Typical Akra squares</h2>
+            <h4>this is 3 squares row</h4>
+              <div class="square3 red">
+                <h1>Consulting</h1>
+                <p>We provide consulting based on profound sector knowledge and many years of process experience. In doing so, we consider ourselves to be creators of awareness and sparring partners and pay less attention to prescribing concepts. </p>
+              </div>
+              <div class="square3 green">
+                <h1>Consulting</h1>
+                <p>We provide consulting based on profound sector knowledge and many years of process experience. In doing so, we consider ourselves to be creators of awareness and sparring partners and pay less attention to prescribing concepts. </p>
+              </div>
+              <div class="square3 blue">
+                <h1>Consulting</h1>
+                <p>We provide consulting based on profound sector knowledge and many years of process experience. In doing so, we consider ourselves to be creators of awareness and sparring partners and pay less attention to prescribing concepts. </p>
+              </div>
+            <p>Go down to see 2 squares row</p>
+          </section>
+
+          <section>
+            <h2>Typical Akra squares</h2>
+            <p>this is 2 squares row</p>
+              <div class="square2 blue">
+                <h1>Consulting</h1>
+                <p>We provide consulting based on profound sector knowledge and many years of process experience. In doing so, we consider ourselves to be creators of awareness and sparring partners and pay less attention to prescribing concepts. </p>
+              </div>
+              <div class="square2 green">
+                <h1>Consulting</h1>
+                <p>We provide consulting based on profound sector knowledge and many years of process experience. In doing so, we consider ourselves to be creators of awareness and sparring partners and pay less attention to prescribing concepts. </p>
+              </div>
+            <p> Go down to see 1 square row</p>
+          </section>
+
+          <section>
+            <h2>Typical Akra squares</h2>
+            <p>this is 1 square row</p>
+              <div class="square1 blue">
+                <h1>Consulting</h1>
+                <p>We provide consulting based on profound sector knowledge and many years of process experience. In doing so, we consider ourselves to be creators of awareness and sparring partners and pay less attention to prescribing concepts. </p>
+              </div>
+          </section>
+        </section>
+
+        <section>
+          <h2>Akra banner integration</h2>
+          <img src="img/akra_intropic_contact_neu.png" alt="">
+          <p>
+            Just put image in img folder and place <code> img </code> tag in source.
+          </p>
+        </section>
+
+        <section>
+          <h2>Contact</h2>
+          <h4>AKRA GmbH Domstraße 17 20095 Hamburg Germany</h4>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2370.540791049153!2d9.9948556!3d53.548113099999995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18f1d20a2a193%3A0xebc43bbdca46c6ad!2sDomstra%C3%9Fe+17%2C+20095+Hamburg%2C+Germany!5e0!3m2!1sen!2s!4v1390916409220" width="900" height="200" frameborder="0" style="border:0"></iframe>
+          <p>
+            Tel.: +49 40 309 535 30
+            <br>
+            Fax: +49 40 309 535 49
+            <br>
+            <a href="mailto:info@akra.de">info@akra.de</a>
+          </p>
+        </section>
+
+        <section>
+          <h2>Meet the Team</h2>
+          <div class="circular inline-block" style="background: url('http://akra.net/uploads/images/zespol/thoc.jpg');"></div>
+          <div class="circular inline-block" style="background: url('http://akra.net/uploads/images/zespol/basu.jpg');"></div>
+          <div class="circular inline-block" style="background: url('http://akra.net/uploads/images/zespol/noga.jpg');"></div>
+          <div class="circular inline-block" style="background: url('http://akra.net/uploads/images/zespol/pelo.jpg');"></div>
+          <p>Our team is just as diverse and individual as the projects of our clients. We support and promote each and every one of our employees and place great value on an open and creative culture.</p>
+        </section>
+
+        <section>
+          <h2>Point of View</h2>
+          <p>
+            Press <strong>ESC</strong> to enter the slide overview.
+          </p>
+          <p>
+            Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
+          </p>
+        </section>
+
+        <section id="transitions">
+          <h2>Transition Styles</h2>
+          <p>
+            You can select from different transitions, like: <br>
+            <a href="?transition=cube#/transitions">Cube</a> -
+            <a href="?transition=page#/transitions">Page</a> -
+            <a href="?transition=concave#/transitions">Concave</a> -
+            <a href="?transition=zoom#/transitions">Zoom</a> -
+            <a href="?transition=linear#/transitions">Linear</a> -
+            <a href="?transition=fade#/transitions">Fade</a> -
+            <a href="?transition=none#/transitions">None</a> -
+            <a href="?#/transitions">Default</a>
+          </p>
+        </section>
+
+        <section id="themes">
+          <h2>Themes</h2>
+          <p>
+            Reveal.js comes with a few themes built in: <br>
+            <a href="?theme=akra#/themes">Akra</a> -
+            <a href="?theme=default#/themes">Default</a> -
+            <a href="?theme=sky#/themes">Sky</a> -
+            <a href="?theme=beige#/themes">Beige</a> -
+            <a href="?theme=simple#/themes">Simple</a> -
+            <a href="?theme=serif#/themes">Serif</a> -
+            <a href="?theme=night#/themes">Night</a> <br>
+            <a href="?theme=moon#/themes">Moon</a> -
+            <a href="?theme=solarized#/themes">Solarized</a>
+          </p>
+          <p>
+            <small>
+              * Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
+            </small>
+          </p>
+        </section>
+
+        <section>
+          <h2>Clever Quotes</h2>
+          <p>
+            These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+            &ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
+          </p>
+          <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+            &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+            reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+          </blockquote>
+        </section>
+
+        <section>
+          <h2>Pretty Code</h2>
+          <pre><code data-trim contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}
+          </code></pre>
+          <p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+        </section>
+
+        <section>
+          <h2>Intergalactic Interconnections</h2>
+          <p>
+            You can link between slides internally,
+            <a href="#/2/3">like this</a>.
+          </p>
+        </section>
+
+        <section>
+          <section id="fragments">
+            <h2>Fragmented Views</h2>
+            <p>Hit the next arrow...</p>
+            <p class="fragment">... to step through ...</p>
+            <ol>
+              <li class="fragment"><code>any type</code></li>
+              <li class="fragment"><em>of view</em></li>
+              <li class="fragment"><strong>fragments</strong></li>
+            </ol>
+
+            <aside class="notes">
+              This slide has fragments which are also stepped through in the notes window.
+            </aside>
+          </section>
+          <section>
+            <h2>Fragment Styles</h2>
+            <p>There's a few styles of fragments, like:</p>
+            <p class="fragment grow">grow</p>
+            <p class="fragment shrink">shrink</p>
+            <p class="fragment roll-in">roll-in</p>
+            <p class="fragment fade-out">fade-out</p>
+            <p class="fragment highlight-red">highlight-red</p>
+            <p class="fragment highlight-green">highlight-green</p>
+            <p class="fragment highlight-blue">highlight-blue</p>
+            <p class="fragment current-visible">current-visible</p>
+            <p class="fragment highlight-current-blue">highlight-current-blue</p>
+          </section>
+        </section>
+
+        <section>
+          <h2>Take a Moment</h2>
+          <p>
+            Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
+            during a presentation.
+          </p>
+        </section>
+
+        <section>
+          <h1>THE END</h1>
+          <h3>BY Hakim El Hattab / hakim.se</h3>
+          <h4>Akra theme by Bartek</h4>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+      
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+  </body>
+</html>
