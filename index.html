@@ -39,8 +39,14 @@
         <section>
           <img src="img/evolution.png"/>
           <p>
-            <p>In general. Twice in detail. Recommended reading.</p>
+            <p>In general. Twice in detail. References.</p>
           </p>
+        </section>
+
+
+        <section>
+          <h2>Meet the referee</h2>
+          <div class="circular inline-block" style="background: url('img/me2.jpg');"></div>
         </section>
 
 
@@ -54,39 +60,30 @@
               <li>3 basic kinds</li>
               <li>23 design patterns</li>
               <li>Why should we use them?</li>
-              <li>OOD Principles</li>
             </ol>
           </div>
           
           <div class="square3 green">
           <h1>Twice in detail</h1>
             <ol>
-              <li>Observer</li>
-              <li>Strategy</li>
+              <li>Singleton</li>
+              <li>Factory Method</li>
             </ol>
-            <br/>
             <br/>
             <br/>
             <br/>
           </div>
           
           <div class="square3 blue">
-          <h1>Recommended reading</h1>
+          <h1>References</h1>
               <ul>
                 <li>articles</li>
                 <li>books</li>
-                <li>podcasts</li>
                 <li>&hellip;</li>
               </ul>
               <br/>
               <br/>
           </div>
-        </section>
-
-
-        <section>
-          <h2>Meet the referee</h2>
-          <div class="circular inline-block" style="background: url('img/me2.jpg');"></div>
         </section>
 
 
@@ -125,54 +122,7 @@
           <section>
             <h2>Why should we use them?</h2>
           </section>
-
-          <section>
-            <h2>OOD Principles</h2>
-            <p class="fragment grow">
-              SOLID
-            </p>
-            <p>
-              by uncle Bob
-            </p>
-          </section>
-
-          <section>
-            <h2>Single Responsibility</h2>
-            <img src="img/srp.jpeg"/>
-            <p>
-              Just because you can, does not mean you should&hellip;
-          </section>
-
-          <section>
-            <h2>Open Closed</h2>
-            <img src="img/ocp.jpg"/>
-            <p>
-              Brain suregery is not necessary when putting on a hat.
-            </p>
-          </section>
-
-          <section>
-            <h2>Liskov Substitution</h2>
-            <img src="img/lsp.jpg"/>
-            <p>
-              If it looks like a duck, quacks like a duck, but needs batteries &ndash;<br/>
-              you probably have the wrong abstraction.
-            </p>
-          </section>
-
-          <section>
-            <h2>Interface Segregation</h2>
-            <img src="img/isp.jpg"/>
-            <p>Plug it in! &ndash; Which one?</p>
-          </section>
-
-          <section>
-            <h2>Dependency Inversion</h2>
-            <img src="img/dip.png"/>
-            <p>Would you solder a lamp directly to the electrical wiring in the wall?</p>
-          </section>
         </section>
-
 
         <section>
           <section>
@@ -180,67 +130,93 @@
           </section>
 
           <section>
-            <h2>Composite</h2>
-            <img src="img/composite/classdiagram1.jpg"/>
+            <h2>Singleton</h2>
+            <ul>
+              <li>exactly 1 instance</li>
+              <li>global access point</li>
+              <li>just-in-time initialization</li>
+            <ul>
           </section>
 
           <section>
-            <img src="img/composite/classdiagram2.jpg"/>
-            <p>Implementierungsvariante</p>
+            <img src="img/Singleton_UML_class_diagram.svg.png" alt="UML class diagram: Singleton"/>
           </section>
 
           <section>
-            <h2>Observer</h2>
-            <img src="img/observer/pull.jpg"/>
-            <p>Pull-Verfahren</p>
+            <h3>Subclassing variations</h3>
           </section>
 
           <section>
-            <img src="img/observer/push.jpg"/>
-            <p>Push-Verfahren</p>
+            <h4>Parameter</h4>
+            <pre><code data-trim contenteditable>
+class Singleton {
+  private static Singleton _instance;
+
+  public static getInstance(String param) {
+    if(param.equals("logger")){
+      _instance = Logger.getInstance();
+    } else if(param.equals("debugger")) {
+      _instance = Debugger.getInstance();
+    } //add all existing subclasses
+    return _instance;
+  }
+}
+            </code></pre>
           </section>
 
           <section>
-            <img src="img/observer/variations.jpg"/>
-            <p>Subject-Variationen</p>
+            <h4>Registry</h4>
+            <pre><code data-trim contenteditable>
+class Singleton {
+  private static Singleton _instance = null;
+  private HashMap _map;
+
+  private Singleton(){}
+
+  public static getInstance() {
+    if(_instance == null){
+      _instance = new Singleton();
+    }
+    return _instance;
+  }
+
+  public getByKey(String param){
+    if(param.equals("logger")){
+
+    }
+  }
+}
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Factory Method</h2>
           </section>
         </section>
         
         <section>
           <section>
-            <h1>Recommended reading</h1>
+            <h1>References</h1>
           </section>
           
           <section>
             <img src="img/book_cover_DesignPatterns_Go4.png" alt="title: Design Patterns | subtitle: Elements of Reusable Object-Oriented Software | authors: Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides"/>
           </section>
-
-          <section>
-            <img src="img/eaa.jpg" alt="title: Patterns of Enterprise Application Architecture | author: Martin Fowler"/>
-          </section>
-
-          <section>
-            <img src="img/head-first.jpg" alt="title: Design Patterns | authors: Eric &amp; Elisabeth Freeman | Head First series"/>
-            <p>
-              see also:
-            </p>
-            <a href="http://blog.codinghorror.com/head-first-design-patterns/"><img src="img/logo-coding-horror.jpg" alt="Coding Horror"/></a>
-          </section>
-
+          
           <section>
             <img src="img/effective-java.jpg" alt="title: Effective Java | author: Joshua Bloch"/>
           </section>
 
           <section>
-            <img src="img/are-your-lights-on.jpg" alt="title: Are Your Lights On? | subtitle: How to Figure Out What the Problem Really Is | authors:  Donald C. Gause, Gerald M. Weinberg"/>
+            <img src="img/sourcemaking_logo.png" alt="Sourcemaking">
+            <p>
+              <a href="http://sourcemaking.com/design_patterns/singleton">Singleton</a><br/>
+              <a href="http://sourcemaking.com/design_patterns/factory_method">Factory Method</a>
+            </p>
           </section>
 
           <section>
-            <h2>&hellip;</h2>
-            <p>
-              I prepared a mail for you, that substitutes an handout.<br/>
-              It provides you with links.
-            </p>
+            <a href="http://blog.codinghorror.com/head-first-design-patterns/"><img src="img/logo-coding-horror.jpg" alt="Coding Horror"/></a>
           </section>
         </section>
         
