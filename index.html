@@ -121,6 +121,12 @@
 
           <section>
             <h2>Why should we use them?</h2>
+            <p class="fragment roll-in"><img src="img/icon-proven.png"/></p>
+          </section>
+
+          <section>
+            <h2>But...</h2>
+            <p class="fragment roll-in"><img src="img/caution_screen.gif"/></p>
           </section>
         </section>
 
@@ -227,6 +233,62 @@ public class Singleton {
 
           <section>
             <h2>Factory Method</h2>
+            <ol>
+              <li>"Classic" definition</li>
+              <li>"Popular" definition</li>
+            </ol>
+          </section>
+
+          <section>
+            <h2>"Classic" definition</h2>
+            <ul>
+              <li>outsource instantiation</li>
+              <li>new is bad</li>
+            </ul>
+          </section>
+
+          <section>
+            <img src="img/factory_method_uml.png"/>
+          </section>
+
+          <section>
+            <h3>Implementation variations</h3>
+            <ul>
+              <li class="fragment roll-in">abstract vs. concrete creator class</li>
+              <li class="fragment roll-in">parameterized factory method</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Popular definition</h3>
+            <ul>
+              <li>static methods</li>
+              <li>new is still bad</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4>Implementation of popular definition</h4>
+            <pre><code data-trim contenteditable>
+public class Color { 
+  public static Color make_RGB_color(int red, int green, int blue) {
+    // do whatever you need to do 
+  }
+  
+  public static Color make_HSB_color(float hue, float saturation, float brightness) {
+    // do whatever you need to do 
+  }
+  
+  public static Color make_HEX_color(String hexCode) {
+    // do whatever you need to do 
+  }
+}
+            </code></pre>
+          </section>
+
+          <section>
+            <h4>Implementation variations</h4>
+            <p>Caching</p>
           </section>
         </section>
         
@@ -244,7 +306,7 @@ public class Singleton {
           </section>
 
           <section>
-            <img src="img/sourcemaking_logo.png" alt="Sourcemaking">
+            <img src="img/sourcemaking_logo.png" alt="Sourcemaking"/>
             <p>
               <a href="http://sourcemaking.com/design_patterns/singleton">Singleton</a><br/>
               <a href="http://sourcemaking.com/design_patterns/factory_method">Factory Method</a>
@@ -255,222 +317,6 @@ public class Singleton {
             <a href="http://blog.codinghorror.com/head-first-design-patterns/"><img src="img/logo-coding-horror.jpg" alt="Coding Horror"/></a>
           </section>
         </section>
-        
-
-
-
-
-
-
-
-
-
-
-
-        <section>
-          <section>
-            <h2>Typical Akra squares</h2>
-            <h4>this is 3 squares row</h4>
-              <div class="square3 red">
-                <h1>Consulting</h1>
-                <p>We provide consulting based on profound sector knowledge and many years of process experience. In doing so, we consider ourselves to be creators of awareness and sparring partners and pay less attention to prescribing concepts. </p>
-              </div>
-              <div class="square3 green">
-                <h1>Consulting</h1>
-                <p>We provide consulting based on profound sector knowledge and many years of process experience. In doing so, we consider ourselves to be creators of awareness and sparring partners and pay less attention to prescribing concepts. </p>
-              </div>
-              <div class="square3 blue">
-                <h1>Consulting</h1>
-                <p>We provide consulting based on profound sector knowledge and many years of process experience. In doing so, we consider ourselves to be creators of awareness and sparring partners and pay less attention to prescribing concepts. </p>
-              </div>
-            <p>Go down to see 2 squares row</p>
-          </section>
-
-          <section>
-            <h2>Typical Akra squares</h2>
-            <p>this is 2 squares row</p>
-              <div class="square2 blue">
-                <h1>Consulting</h1>
-                <p>We provide consulting based on profound sector knowledge and many years of process experience. In doing so, we consider ourselves to be creators of awareness and sparring partners and pay less attention to prescribing concepts. </p>
-              </div>
-              <div class="square2 green">
-                <h1>Consulting</h1>
-                <p>We provide consulting based on profound sector knowledge and many years of process experience. In doing so, we consider ourselves to be creators of awareness and sparring partners and pay less attention to prescribing concepts. </p>
-              </div>
-            <p> Go down to see 1 square row</p>
-          </section>
-
-          <section>
-            <h2>Typical Akra squares</h2>
-            <p>this is 1 square row</p>
-              <div class="square1 blue">
-                <h1>Consulting</h1>
-                <p>We provide consulting based on profound sector knowledge and many years of process experience. In doing so, we consider ourselves to be creators of awareness and sparring partners and pay less attention to prescribing concepts. </p>
-              </div>
-          </section>
-        </section>
-
-        <section>
-          <h2>Akra banner integration</h2>
-          <img src="img/akra_intropic_contact_neu.png" alt="">
-          <p>
-            Just put image in img folder and place <code> img </code> tag in source.
-          </p>
-        </section>
-
-        <section>
-          <h2>Contact</h2>
-          <h4>AKRA GmbH Domstraße 17 20095 Hamburg Germany</h4>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2370.540791049153!2d9.9948556!3d53.548113099999995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18f1d20a2a193%3A0xebc43bbdca46c6ad!2sDomstra%C3%9Fe+17%2C+20095+Hamburg%2C+Germany!5e0!3m2!1sen!2s!4v1390916409220" width="900" height="200" frameborder="0" style="border:0"></iframe>
-          <p>
-            Tel.: +49 40 309 535 30
-            <br>
-            Fax: +49 40 309 535 49
-            <br>
-            <a href="mailto:info@akra.de">info@akra.de</a>
-          </p>
-        </section>
-
-        <section>
-          <h2>Meet the Team</h2>
-          <div class="circular inline-block" style="background: url('http://akra.net/uploads/images/zespol/thoc.jpg');"></div>
-          <div class="circular inline-block" style="background: url('http://akra.net/uploads/images/zespol/basu.jpg');"></div>
-          <div class="circular inline-block" style="background: url('http://akra.net/uploads/images/zespol/noga.jpg');"></div>
-          <div class="circular inline-block" style="background: url('http://akra.net/uploads/images/zespol/pelo.jpg');"></div>
-          <p>Our team is just as diverse and individual as the projects of our clients. We support and promote each and every one of our employees and place great value on an open and creative culture.</p>
-        </section>
-
-        <section>
-          <h2>Point of View</h2>
-          <p>
-            Press <strong>ESC</strong> to enter the slide overview.
-          </p>
-          <p>
-            Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-          </p>
-        </section>
-
-        <section id="transitions">
-          <h2>Transition Styles</h2>
-          <p>
-            You can select from different transitions, like: <br>
-            <a href="?transition=cube#/transitions">Cube</a> -
-            <a href="?transition=page#/transitions">Page</a> -
-            <a href="?transition=concave#/transitions">Concave</a> -
-            <a href="?transition=zoom#/transitions">Zoom</a> -
-            <a href="?transition=linear#/transitions">Linear</a> -
-            <a href="?transition=fade#/transitions">Fade</a> -
-            <a href="?transition=none#/transitions">None</a> -
-            <a href="?#/transitions">Default</a>
-          </p>
-        </section>
-
-        <section id="themes">
-          <h2>Themes</h2>
-          <p>
-            Reveal.js comes with a few themes built in: <br>
-            <a href="?theme=akra#/themes">Akra</a> -
-            <a href="?theme=default#/themes">Default</a> -
-            <a href="?theme=sky#/themes">Sky</a> -
-            <a href="?theme=beige#/themes">Beige</a> -
-            <a href="?theme=simple#/themes">Simple</a> -
-            <a href="?theme=serif#/themes">Serif</a> -
-            <a href="?theme=night#/themes">Night</a> <br>
-            <a href="?theme=moon#/themes">Moon</a> -
-            <a href="?theme=solarized#/themes">Solarized</a>
-          </p>
-          <p>
-            <small>
-              * Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-            </small>
-          </p>
-        </section>
-
-        <section>
-          <h2>Clever Quotes</h2>
-          <p>
-            These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-            &ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-          </p>
-          <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-            &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-            reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-          </blockquote>
-        </section>
-
-        <section>
-          <h2>Pretty Code</h2>
-          <pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-          </code></pre>
-          <p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-        </section>
-
-        <section>
-          <h2>Intergalactic Interconnections</h2>
-          <p>
-            You can link between slides internally,
-            <a href="#/2/3">like this</a>.
-          </p>
-        </section>
-
-        <section>
-          <section id="fragments">
-            <h2>Fragmented Views</h2>
-            <p>Hit the next arrow...</p>
-            <p class="fragment">... to step through ...</p>
-            <ol>
-              <li class="fragment"><code>any type</code></li>
-              <li class="fragment"><em>of view</em></li>
-              <li class="fragment"><strong>fragments</strong></li>
-            </ol>
-
-            <aside class="notes">
-              This slide has fragments which are also stepped through in the notes window.
-            </aside>
-          </section>
-          <section>
-            <h2>Fragment Styles</h2>
-            <p>There's a few styles of fragments, like:</p>
-            <p class="fragment grow">grow</p>
-            <p class="fragment shrink">shrink</p>
-            <p class="fragment roll-in">roll-in</p>
-            <p class="fragment fade-out">fade-out</p>
-            <p class="fragment highlight-red">highlight-red</p>
-            <p class="fragment highlight-green">highlight-green</p>
-            <p class="fragment highlight-blue">highlight-blue</p>
-            <p class="fragment current-visible">current-visible</p>
-            <p class="fragment highlight-current-blue">highlight-current-blue</p>
-          </section>
-        </section>
-
-        <section>
-          <h2>Take a Moment</h2>
-          <p>
-            Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-            during a presentation.
-          </p>
-        </section>
-
-        <section>
-          <h1>THE END</h1>
-          <h3>BY Hakim El Hattab / hakim.se</h3>
-          <h4>Akra theme by Bartek</h4>
-        </section>
-
       </div>
 
     </div>
