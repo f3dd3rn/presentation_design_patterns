@@ -183,13 +183,15 @@ public class Singleton {
 
   private Singleton(){}
 
-  public static Singleton getInstance(String classname) {
+  public static Singleton getInstance(String classname) throws IllegalArgumentException {
     if(singletonName.equals("logger")) {
       _instance = Logger.getInstance();
     } else if(singletonName.equals("debugger")) {
       _instance = Debugger.getInstance();
     } else if(singletonName.equals("singleton")) {
       _instance = new Singleton();
+    } else {
+      throw new IllegalArgumentException("Illegal classname");
     }
     return _instance;
   }
