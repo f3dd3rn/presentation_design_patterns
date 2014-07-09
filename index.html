@@ -143,21 +143,48 @@
           </section>
 
           <section>
-            <h3>Subclassing variations</h3>
+            <h3>Implementation</h3>
+            <pre><code data-trim contenteditable>
+public class Singleton {
+  private static Singleton _instance = null;
+
+  private Singleton(){}
+
+  public static Singleton getInstance(){
+    if(_instance == null){
+      _instance = new Singleton();
+    }
+    return _instance;
+  }
+
+}
+            </code></pre>
           </section>
 
           <section>
-            <h4>Parameter</h4>
+            <h3>Subclassing variations</h3>
+            <ol>
+              <li>Instantiation in subclasses</li>
+              <li>Registry</li>
+            </ol>
+          </section>
+
+          <section>
+            <h4>Instantiation in subclasses</h4>
             <pre><code data-trim contenteditable>
-class Singleton {
+public class Singleton {
   private static Singleton _instance;
 
-  public static getInstance(String param) {
-    if(param.equals("logger")){
+  private Singleton(){}
+
+  public static Singleton getInstance(String classname) {
+    if(singletonName.equals("logger")) {
       _instance = Logger.getInstance();
-    } else if(param.equals("debugger")) {
+    } else if(singletonName.equals("debugger")) {
       _instance = Debugger.getInstance();
-    } //add all existing subclasses
+    } else if(singletonName.equals("singleton")) {
+      _instance = new Singleton();
+    }
     return _instance;
   }
 }
@@ -167,23 +194,32 @@ class Singleton {
           <section>
             <h4>Registry</h4>
             <pre><code data-trim contenteditable>
-class Singleton {
-  private static Singleton _instance = null;
-  private HashMap _map;
-
-  private Singleton(){}
-
-  public static getInstance() {
-    if(_instance == null){
-      _instance = new Singleton();
+public class Singleton {
+   private static Map&lt;String,Singleton&gt; map = new HashMap&lt;String,Singleton&gt;();
+   
+   private Singleton() {}
+   
+   public static Singleton getInstance(String classname) throws IllegalArgumentException {
+    if(classname == null) {
+      throw new IllegalArgumentException("Illegal classname");
     }
-    return _instance;
-  }
-
-  public getByKey(String param){
-    if(param.equals("logger")){
-
+      
+    Singleton singleton = (Singleton)map.get(classname);
+    if(singleton != null) {
+       return singleton;
     }
+
+    if(classname.equals("SingeltonSubclassOne")) {
+      singleton = new SingletonSubclassOne();         
+    } else if(classname.equals("SingeltonSubclassTwo")) {
+      singleton = new SingletonSubclassTwo();
+    } else if(classname.equals("Singelton")) {
+      singleton = new Singleton();
+    } else {
+      throw new IllegalArgumentException("Illegal classname");
+    }
+    map.put(classname, singleton);
+    return singleton;
   }
 }
             </code></pre>
